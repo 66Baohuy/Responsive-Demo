@@ -103,17 +103,19 @@ header {
   }
 }
 
+/* Media queries */
 @media (max-width: 912px) {
   header {
     padding: 12px 3%;
     transition: 0.2s;
     display: flex;
-    justify-content: space-between; /* Đảm bảo .navbar và #menu-icon nằm hai bên */
+    flex-direction: column; /* Chuyển sang hiển thị theo chiều dọc */
   }
 
   #menu-icon {
     display: block;
-    order: 1; /* Đặt thứ tự là 1 để #menu-icon xuất hiện bên trái */
+    order: 1; /* Thứ tự 1: Hiển thị đầu tiên */
+    margin-left: 10px; /* Thêm khoảng cách bên trái */
   }
 
   .navbar {
@@ -125,7 +127,8 @@ header {
     flex-direction: column;
     transition: all 0.5s ease;
     text-align: left;
-    order: 3; /* Đặt thứ tự là 3 để .navbar xuất hiện dưới cùng */
+    order: 3; /* Thứ tự 3: Hiển thị thứ ba */
+    margin-top: 10px; /* Thêm khoảng cách bên trên */
   }
 
   .in {
@@ -141,17 +144,30 @@ header {
   .navbar.open {
     top: 100%;
   }
-  .icon {
-    display: none;
+
+  .container {
+    flex-direction: column; /* Chuyển sang hiển thị theo chiều dọc */
   }
-  .title h1 {
-    order: 4;
+
+  .icons {
+    order: 2; /* Thứ tự 2: Hiển thị thứ hai */
+    margin-left: 10px; /* Thêm khoảng cách bên trái */
   }
+
+  .title {
+    order: 4; /* Thứ tự 4: Hiển thị thứ tư */
+    margin-top: 20px; /* Thêm khoảng cách bên trên */
+    margin-left: 10px; /* Thêm khoảng cách bên trái */
+  }
+
   .text {
-    order: 5;
+    order: 5; /* Thứ tự 5: Hiển thị thứ năm */
+    margin-bottom: 10px; /* Giảm khoảng cách bên dưới */
   }
+
   .image {
-    order: 6;
+    order: 6; /* Thứ tự 6: Hiển thị thứ sáu */
+    margin-bottom: 20px; /* Thêm khoảng cách bên dưới */
   }
 }
 .title {
